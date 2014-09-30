@@ -38,7 +38,12 @@ class Canvas extends JPanel implements ActionListener{
     public Canvas() {
         setBorder(BorderFactory.createLineBorder(Color.black));
     }
-
+    /**
+     * 
+     * @param columns
+     * @param rows
+     * @param squareSize 
+     */
     public Canvas(int columns, int rows, int squareSize) {
         this.columns = columns;
         this.rows = rows;
@@ -53,7 +58,9 @@ class Canvas extends JPanel implements ActionListener{
         } 
          initUI();
     }
-    
+    /**Metodo que inicializa la interfaz grafica
+     * 
+     */
     private void initUI() {
         setLayout(null);
         setDoubleBuffered(true);        
@@ -123,6 +130,9 @@ class Canvas extends JPanel implements ActionListener{
     }
     
     @Override
+    /**
+     * 
+     */
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         doDrawing(g);        

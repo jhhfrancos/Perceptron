@@ -13,7 +13,7 @@ import javax.swing.SwingUtilities;
  * @author Snipercat
  */
 public class Perceptron {
-
+    /**Metodo principal que llama el menu emergente principal*/
     public static void main(String[] args) {
         
         

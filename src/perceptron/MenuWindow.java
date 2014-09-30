@@ -33,12 +33,12 @@ public class MenuWindow extends JFrame implements ActionListener{
     private JTextField ptextfield;
     
     private JButton boton1;
-    
+    /**contructor de la clase MenuWindow*/
     public MenuWindow() {
 
         initUI();
     }
-
+    //**Inicializacion de la Interfaz grafica*/
     private void initUI() {
 //parámetros de la ventana
         setTitle("Parámetros de Matriz");
@@ -101,6 +101,7 @@ public class MenuWindow extends JFrame implements ActionListener{
     
     @Override
      public void actionPerformed(ActionEvent e) {
+        /**Si hace click en Iniciar: Se llamará la ventana generadora de la matriz*/
         if (e.getSource()==boton1) {
             //try/catch usado para manejar el error ocurrido cuando se ingresa letras
             try{

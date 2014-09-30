@@ -19,7 +19,9 @@ public class Lector {
         this.matriz=a;
         
     }
-    
+    /**retornael numero rastreado dentro de la matriz
+     *@return Retorna el resultado del numero en entero del numero hallado en la matriz
+     */
     public int numero(){
         int resultado=1;
         ArrayList<Integer> numeros= new ArrayList<Integer>();
@@ -29,16 +31,20 @@ public class Lector {
             
             inicio++;
             numeros.add(k);
-            System.out.println(numeros);
+            System.out.println("arreglo de nueros" + " inicio "+ inicio + " numeros "+numeros);
             h=inicio;
         }
         
         for(int i=0;i<numeros.size();i++){
             resultado=resultado*numeros.get(i);
         }       
-            
         return resultado;
     }
+    /**
+     * 
+     * @param x
+     * @return 
+     */
     
     public int rastreo(int x){       
         
@@ -64,7 +70,13 @@ public class Lector {
         return k;
     }
     
-    //Metodo que identifica el numero dibujado
+    /**Metodo que identifica el numero dibujado
+     * 
+     * @param y
+     * @param x
+     * @param matriz
+     * @return 
+     */
     public int[] identificar(int y, int x, int[][] matriz){
         
         //pimer numer: numero, segundo: posicion donde se queda en x
@@ -113,7 +125,13 @@ public class Lector {
         return resultado;
     }
     
-    //metodo que lee se desplaza sobre la cadena de cuadros pintados
+    /**metodo que lee se desplaza sobre la cadena de cuadros pintados
+     * 
+     * @param y
+     * @param x
+     * @param matriz
+     * @return 
+     */
     public Object[] mover(int y, int x, int[][] matriz){
         
         recorrido[n][0]=y;
@@ -148,7 +166,13 @@ public class Lector {
     }
     
     
-    // Metodo que identifica el tipo de vertice encontrado
+    /** Metodo que identifica el tipo de vertice encontrado
+     * 
+     * @param y
+     * @param x
+     * @param matriz
+     * @return 
+     */
     public Object[] vertice(int y, int x, int[][] matriz){
         
         Object[] vert={' ',0,0,0,0};     
@@ -195,7 +219,13 @@ public class Lector {
         
         return vert;
     }    
-    
+    /**
+     * 
+     * @param y
+     * @param x
+     * @param recorrido
+     * @return 
+     */
     public boolean isIn(int y, int x,int[][] recorrido){
         Boolean flag = null;
         int[] k={y,x};

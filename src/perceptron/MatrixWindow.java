@@ -17,14 +17,19 @@ public class MatrixWindow  extends JFrame{
     private final int columns;
     private final int rows;
     private final int squareSize;
-    
+    /** Se inicializa la ventana de matriz 
+     *@param columns numero de columnas de la matriz
+     *@param rows numero de filas de la matriz
+     *@param squareSize tamaño de los cuadros de la matriz
+     *
+     */
     public MatrixWindow(int columns, int rows, int squareSize) {
         this.columns = columns;
         this.rows = rows;
         this.squareSize = squareSize;
         initUI();
     }
-
+    /**Inicializacion de la interfaz grafica*/
     private void initUI() {
         
         //Atributos de la ventana
